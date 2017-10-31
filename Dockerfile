@@ -10,9 +10,14 @@ RUN apt-get update && \
         libpng12-dev \
         libfreetype6-dev \
         libssl-dev \
-        libmcrypt-dev
+        libmcrypt-dev \
+        libmcrypt4 \
+        libcurl3-dev \
+        libjpeg62-turbo
 
 RUN docker-php-ext-install mcrypt
+
+RUN docker-php-ext-install mbstring
 
 RUN docker-php-ext-install mysqli \
     && docker-php-ext-install pdo_mysql
