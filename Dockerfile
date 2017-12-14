@@ -13,7 +13,9 @@ RUN apt-get update && \
         libmcrypt-dev \
         libmcrypt4 \
         libcurl3-dev \
-        libjpeg62-turbo
+        libjpeg62-turbo \
+        && rm -rf /var/lib/apt/lists/* \
+        && apt-get purge -y --auto-remove
 
 RUN docker-php-ext-install mcrypt
 
