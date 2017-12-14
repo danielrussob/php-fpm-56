@@ -1,4 +1,4 @@
-FROM php:5.6.32-fpm-jessie
+FROM php:5.6.31-fpm-jessie
 
 RUN apt-get update && \
     apt-get install -y --no-install-recommends \
