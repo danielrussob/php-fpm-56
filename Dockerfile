@@ -1,5 +1,6 @@
 FROM php:5.6.32-fpm-jessie
 
+
 RUN apt-get update && \
     apt-get install -y --no-install-recommends \
         curl \
